@@ -1,0 +1,73 @@
+﻿<Page x:Class="FloorMaster.PartnerData"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:FloorMaster"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PartnerData"
+      IsVisibleChanged="Page_IsVisibleChanged">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="*"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+        </Grid.RowDefinitions>
+
+        <ListView Name ="PartnerListView" HorizontalContentAlignment="Stretch" Grid.Row="1" Grid.Column="0" ScrollViewer.CanContentScroll="False" d:ItemsSource="{d:SampleData ItemCount=5}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.ContextMenu>
+                            <ContextMenu>
+                                <MenuItem Header="Редактировать" Name="EditPartner" Click="EditPartner_Click"/>
+                            </ContextMenu>
+                        </Grid.ContextMenu>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                            <ColumnDefinition Width="0.1*"></ColumnDefinition>
+                            <ColumnDefinition Width="0.1*"></ColumnDefinition>
+                            <ColumnDefinition Width="*"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Border Grid.RowSpan="4" Grid.ColumnSpan="4" BorderBrush="Black" BorderThickness="1"/>
+                        <Border Grid.RowSpan="4" Grid.Column="1"  BorderBrush="Black" BorderThickness="0 0 0.5 0"/>
+                        <Border Grid.RowSpan="4" Grid.Column="2"  BorderBrush="Black" BorderThickness="0.5 0 0 0"/>
+
+                        <TextBlock Margin="10 10 10 0" Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" FontSize="20" TextWrapping="Wrap">
+                            <TextBlock.Text>
+                                <MultiBinding StringFormat="{}{0} | {1}">
+                                    <Binding Path="TheFormOfTheOrganizationDisplay"/>
+                                    <Binding Path="Title"/>
+                                </MultiBinding>
+                            </TextBlock.Text>
+                        </TextBlock>
+                        
+                        <TextBlock Margin="10 0 10 0" Grid.Column="0" Grid.Row="1"  HorizontalAlignment="Left" FontSize="15">
+                            <TextBlock.Text>
+                                <MultiBinding StringFormat="{}Директор: {0} {1} {2}">
+                                    <Binding Path="Surname"/>
+                                    <Binding Path="Name"/>
+                                    <Binding Path="Patronomic"/>
+                                </MultiBinding>
+                            </TextBlock.Text>
+                        </TextBlock>
+                        <TextBlock Margin="10 0 10 0" Text="{Binding PhoneNumberFormat, StringFormat={}Номер телефона: {0}}" Grid.Column="0" Grid.Row="2"  HorizontalAlignment="Left" FontSize="15" TextWrapping="Wrap"></TextBlock>
+                        <TextBlock Margin="10 0 10 10" Text="{Binding RatingFormat, StringFormat=Рейтинг: {0}}" Grid.Column="0" Grid.Row="3"  HorizontalAlignment="Left" FontSize="15" TextWrapping="Wrap"></TextBlock>
+
+
+                        <TextBlock Margin="0 0 0 0" Text="{Binding DiscountFormat}" Grid.Column="3" Grid.Row="1" HorizontalAlignment="Center" FontSize="15" TextWrapping="Wrap"></TextBlock>
+
+                    </Grid>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</Page>

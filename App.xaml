@@ -1,0 +1,19 @@
+﻿<Application x:Class="FloorMaster.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:FloorMaster"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <Style TargetType="Window">
+            <Setter Property="FontFamily" Value="Segoe UI"/>
+        </Style>
+        <Style TargetType="ListViewItem">
+            <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+        </Style>
+
+        <SolidColorBrush x:Key="MainColor" Color="#FFFFFF" />
+        <SolidColorBrush x:Key="AdditionalColor" Color="#F4E8D3" />
+        <SolidColorBrush x:Key="FocusingAttention" Color="#67BA80" />
+
+    </Application.Resources>
+</Application>

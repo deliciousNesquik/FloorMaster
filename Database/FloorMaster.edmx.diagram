@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b9bfbc4955c742b69abb441370379f80" Name="Diagram1">
+        <EntityTypeShape EntityType="FloorMasterModel.Employee" Width="1.5" PointX="3" PointY="14.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FloorMasterModel.HistoryOfChangesInTheAmountOfMaterialInStock" Width="1.5" PointX="5.25" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FloorMasterModel.HistoryOfChangesInTheQuantityOfProductsInStock" Width="1.5" PointX="10.5" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FloorMasterModel.Materials" Width="1.5" PointX="3" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="FloorMasterModel.Partner" Width="1.5" PointX="11.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FloorMasterModel.PointOfSale" Width="1.5" PointX="13.5" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FloorMasterModel.Positions" Width="1.5" PointX="0.75" PointY="16.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FloorMasterModel.Products" Width="1.5" PointX="8.25" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="FloorMasterModel.Requests" Width="1.5" PointX="13.5" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FloorMasterModel.Suppliers" Width="1.5" PointX="0.75" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FloorMasterModel.TheFormOfTheOrganization" Width="1.5" PointX="9" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="FloorMasterModel.TheHistoryOfChangesInTheMinimumCostForThePartner" Width="1.5" PointX="13.5" PointY="11.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="FloorMasterModel.TheHistoryOfSuppliesOfMaterials" Width="1.5" PointX="5.25" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="FloorMasterModel.TypeOfMaterials" Width="1.5" PointX="0.75" PointY="5.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="FloorMasterModel.TypeOfProducts" Width="1.5" PointX="6" PointY="11.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="FloorMasterModel.UnitsOfMeasurement" Width="1.5" PointX="0.75" PointY="11.625" IsExpanded="true" />
+        <AssociationConnector Association="FloorMasterModel.FK_Заявки_Сотрудники" ManuallyRouted="false" />
+        <AssociationConnector Association="FloorMasterModel.FK_История_поставок_материалов_Сотрудники" ManuallyRouted="false" />
+        <AssociationConnector Association="FloorMasterModel.FK_Сотрудники_Должности" ManuallyRouted="false" />
+        <AssociationConnector Association="FloorMasterModel.FK_История_изменений_количества_материала_на_складе_Материалы" ManuallyRouted="false" />
+        <AssociationConnector Association="FloorMasterModel.FK_История_изменения_количества_продукции_на_складе_Продукция" ManuallyRouted="false" />
+        <AssociationConnector Association="FloorMasterModel.FK_История_поставок_материалов_Материалы" ManuallyRouted="false" />
+        <AssociationConnector Association="FloorMasterModel.FK_Материалы_Единицы_измерения" ManuallyRouted="false" />
+        <AssociationConnector Association="FloorMasterModel.FK_Материалы_Поставщики" ManuallyRouted="false" />
+        <AssociationConnector Association="FloorMasterModel.FK_Материалы_Тип_материала" ManuallyRouted="false" />
+        <AssociationConnector Association="FloorMasterModel.FK_Заявки_Партнеры" ManuallyRouted="false" />
+        <AssociationConnector Association="FloorMasterModel.FK_История_изменения_минимальной_стоимости_для_партнера_Партнеры" ManuallyRouted="false" />
+        <AssociationConnector Association="FloorMasterModel.FK_Партнеры_Форма_организации" ManuallyRouted="false" />
+        <AssociationConnector Association="FloorMasterModel.FK_Заявки_Продукция" ManuallyRouted="false" />
+        <AssociationConnector Association="FloorMasterModel.FK_Продукция_Тип_продукции" ManuallyRouted="false" />
+        <AssociationConnector Association="FloorMasterModel.FK_История_поставок_материалов_Поставщики" ManuallyRouted="false" />
+        <AssociationConnector Association="FloorMasterModel.MaterialsForProducts" ManuallyRouted="false" />
+        <AssociationConnector Association="FloorMasterModel.PartnersForThePointOfSale" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
